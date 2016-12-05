@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.actorDao">
+    <!-- <resultMap type="" id=""></resultMap> -->
+    <select id="queryActor" parameterType="map" resultType="map">
+        SELECT * FROM `account_num`
+    </select>
+    
+    <select id="test" resultType="map">
+        SELECT json_extract(task_history_person_info,'$.personMobile') AS moible,json_extract(task_history_person_info,'$.vehicle') AS vehicle 
+        FROM `task_history` WHERE task_history_id = 1 
+    </select>
+</mapper>
